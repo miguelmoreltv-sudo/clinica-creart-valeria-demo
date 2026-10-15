@@ -142,10 +142,11 @@
       </a>
 
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#metodo" class="nav-link">Método CreArT</a>
         <a href="#tratamientos" class="nav-link">Tratamientos</a>
+        <a href="#metodo" class="nav-link">Método CreArT</a>
         <a href="#equipo" class="nav-link">Equipo & Espacio</a>
         <a href="#opiniones" class="nav-link">Opiniones</a>
+        <a href="#compromiso" class="nav-link">Garantía & Citas</a>
         <a href="#ubicacion" class="nav-link">Ubicación</a>
       </nav>
 
@@ -180,12 +181,12 @@
           </p>
 
           <div class="hero-cta-group">
-            <button class="btn btn-primary" onclick="openBookingModal('valoracion')">
-              Reservar diagnóstico y cita (Señal 25€ deducible)
-            </button>
-            <a href="#tratamientos" class="btn btn-secondary">
-              Explorar catálogo
+            <a href="#tratamientos" class="btn btn-primary">
+              Ver tratamientos y precios
             </a>
+            <button class="btn btn-secondary" onclick="openBookingModal('valoracion')">
+              Pedir valoración con Gabriela
+            </button>
           </div>
 
           <div class="hero-stats">
@@ -221,12 +222,39 @@
       </div>
     </section>
 
+    <!-- Treatments Bento Catalog -->
+    <section id="tratamientos" class="treatments-section">
+      <div class="container">
+        <div class="treatments-header-wrap">
+          <div>
+            <p class="eyebrow">CATÁLOGO Y PRECIOS</p>
+            <h2 class="section-title">Tratamientos pensados para cada necesidad</h2>
+            <p class="section-subtitle">
+              Precios transparentes y aparatología médica de vanguardia. Elige tu tratamiento o consulta con Gabriela en tu diagnóstico personalizado.
+            </p>
+          </div>
+
+          <div class="treatment-tabs" role="tablist">
+            <button class="tab-btn active" data-tab="todos">Todos</button>
+            <button class="tab-btn" data-tab="facial">Facial</button>
+            <button class="tab-btn" data-tab="corporal">Corporal</button>
+            <button class="tab-btn" data-tab="depilacion">Depilación Láser</button>
+            <button class="tab-btn" data-tab="masajes">Masajes</button>
+          </div>
+        </div>
+
+        <div id="treatmentsGrid" class="bento-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
     <!-- Method Section: 2 Steps (Valoración Bonificada + Tratamiento con Señal) -->
     <section id="metodo" class="method-section">
       <div class="container">
         <div style="text-align: center; max-width: 680px; margin: 0 auto;">
-          <p class="eyebrow" style="justify-content: center;">NUESTRO MÉTODO TRANSPARENTE</p>
-          <h2 class="section-title">Diagnóstico profesional y compromiso mutuo</h2>
+          <p class="eyebrow" style="justify-content: center;">NUESTRO MÉTODO CLÍNICO</p>
+          <h2 class="section-title">Diagnóstico profesional y tratamiento en cabina</h2>
           <p class="section-subtitle" style="margin: 0 auto;">
             En CreArT no realizamos diagnósticos superficiales ni vendemos tratamientos a ciegas. Cada minuto de nuestra consulta está dedicado a tu piel con un protocolo riguroso.
           </p>
@@ -243,11 +271,11 @@
             <ul class="method-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Diagnóstico profesional visual y palpatorio.
+                Diagnóstico profesional visual y palpatorio con dermoanalizador.
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <strong>100% bonificado:</strong> El coste de la valoración se descuenta de tu primer tratamiento.
+                <strong>100% bonificado:</strong> El coste de la valoración se descuenta íntegramente de tu primer tratamiento.
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -255,14 +283,14 @@
               </li>
             </ul>
             <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('valoracion')">
-              Reservar diagnóstico con señal deducible
+              Reservar diagnóstico bonificado
             </button>
           </div>
 
           <!-- Paso 2 -->
           <div class="method-card">
             <span class="method-badge badge-deposit">Paso 2 · Cita confirmada</span>
-            <h3 class="method-title">Tratamiento en Cabina con Señal de 25€</h3>
+            <h3 class="method-title">Tratamiento en Cabina Exclusiva</h3>
             <p class="method-desc">
               Cuando reservas tu cita, bloqueamos la cabina y la especialista exclusivamente para ti. Para asegurar tu turno y garantizar la máxima puntualidad, solicitamos una señal de 25€.
             </p>
@@ -284,54 +312,6 @@
               Reservar tratamiento directo
             </button>
           </div>
-        </div>
-
-        <!-- Anti-No-Show & Commitment Policy Callout -->
-        <div class="policy-callout">
-          <div class="policy-callout-header">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <div class="policy-callout-title">Política de Asistencia, Puntualidad y Cancelación (Protección CreArT)</div>
-          </div>
-          <p style="font-size: 0.875rem; color: var(--color-ink-soft); line-height: 1.6;">
-            En Clínica CreArT valoramos el tiempo de nuestras pacientes tanto como el de nuestras especialistas. Por respeto a la agenda y al resto de personas en lista de espera, aplicamos una política clara y honesta:
-          </p>
-          <div class="policy-grid">
-            <div class="policy-card">
-              <span class="policy-card-tag positive">✓ Paciente comprometida / Modificación con aviso</span>
-              <p>Si asistes a tu cita o necesitas reprogramar avisando con al menos <strong>24 horas de antelación</strong>, tu señal de 25€ se descuenta al 100% de tu tratamiento o se traslada a la nueva fecha sin ningún recargo.</p>
-            </div>
-            <div class="policy-card">
-              <span class="policy-card-tag warning">✕ Incomparecencia sin aviso (No-Show)</span>
-              <p>Si no acudes a tu cita o cancelas con menos de 24 horas, <strong>la señal de 25€ se retiene y no es reembolsable</strong>, para compensar el bloqueo de sala y el tiempo reservado de la especialista.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Treatments Bento Catalog -->
-    <section id="tratamientos" class="treatments-section">
-      <div class="container">
-        <div class="treatments-header-wrap">
-          <div>
-            <p class="eyebrow">CATÁLOGO Y PRECIOS</p>
-            <h2 class="section-title">Tratamientos pensados para cada necesidad</h2>
-            <p class="section-subtitle">
-              Precios transparentes y aparatología de vanguardia. La valoración previa te ayuda a elegir el protocolo adecuado.
-            </p>
-          </div>
-
-          <div class="treatment-tabs" role="tablist">
-            <button class="tab-btn active" data-tab="todos">Todos</button>
-            <button class="tab-btn" data-tab="facial">Facial</button>
-            <button class="tab-btn" data-tab="corporal">Corporal</button>
-            <button class="tab-btn" data-tab="depilacion">Depilación Láser</button>
-            <button class="tab-btn" data-tab="masajes">Masajes</button>
-          </div>
-        </div>
-
-        <div id="treatmentsGrid" class="bento-grid">
-          <!-- Populated dynamically by app.js -->
         </div>
       </div>
     </section>
@@ -439,6 +419,45 @@
               <span>Clara V.</span>
               <span class="review-badge">Cliente verificada</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commitment & Booking Policy Section (Positioned comfortably after reviews, before location) -->
+    <section id="compromiso" class="commitment-section" style="padding: 72px 0; background: var(--color-surface); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+      <div class="container" style="max-width: 860px;">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <p class="eyebrow" style="justify-content: center;">TRANSPARENCIA & COMPROMISO</p>
+          <h2 class="section-title">Garantía de puntualidad y cabina exclusiva</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 620px;">
+            En CreArT protegemos el tiempo de cada paciente con cabinas individuales preparadas y desinfectadas antes de tu llegada.
+          </p>
+        </div>
+
+        <div class="policy-callout" style="margin-top: 0; background: #FFF;">
+          <div class="policy-callout-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="policy-callout-title">Por qué solicitamos una señal bonificada de 25€ al reservar</div>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--color-ink-soft); line-height: 1.6;">
+            Bloqueamos el espacio y el tiempo de Gabriela o Daniela exclusivamente para ti. Para evitar que las cabinas se queden desocupadas y mantener una agenda rigurosa sin esperas, aplicamos un protocolo de respeto mutuo:
+          </p>
+          <div class="policy-grid">
+            <div class="policy-card">
+              <span class="policy-card-tag positive">✓ 100% Bonificado / Flexibilidad 24h</span>
+              <p>Tu señal de 25€ <strong>se descuenta íntegramente</strong> de tu tratamiento o productos Skeyndor en clínica. Si necesitas cambiar de día, puedes reprogramar sin coste avisando con al menos 24 horas de antelación.</p>
+            </div>
+            <div class="policy-card">
+              <span class="policy-card-tag warning">✕ Cancelación tardía (<24h) o No-Show</span>
+              <p>Si no acudes a tu cita o cancelas sin 24 horas de margen, la señal se retiene para compensar el bloqueo de cabina médica y el tiempo reservado de la especialista.</p>
+            </div>
+          </div>
+          
+          <div style="margin-top: 28px; text-align: center;">
+            <button class="btn btn-primary" onclick="openBookingModal('valoracion')">
+              Pedir cita con garantía de cabina exclusiva
+            </button>
           </div>
         </div>
       </div>
