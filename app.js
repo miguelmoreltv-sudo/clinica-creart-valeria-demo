@@ -80,7 +80,8 @@ const state = {
     bookingType: 'valoracion', // 'valoracion' (0€) or 'tratamiento' (25€ señal)
     selectedTreatment: 'valoracion-gratis',
     treatmentName: 'Valoración Previa de Diagnóstico (20 min)',
-    priceLabel: 'Gratuita (0€)',
+    priceLabel: '100% Bonificada (Señal 25€ deducible)',
+    paymentMethod: 'bizum', // 'bizum', 'tarjeta', 'clinica'
     date: '2026-10-20',
     time: '12:00',
     name: '',
@@ -220,25 +221,39 @@ function updateWizardUI() {
   // Step 1: Modalidad
   if (state.wizard.step === 1) {
     body.innerHTML = `
-      <p style="margin-bottom: 18px; font-size: 0.9375rem; color: var(--color-ink-soft);">
-        Selecciona la modalidad de tu cita en Clínica CreArT:
+      <!-- 1-Click WhatsApp Fast Booking Recommended by The Founder -->
+      <div class="whatsapp-fast-card" onclick="openWhatsAppBooking()">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="whatsapp-fast-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.035-.478-1.579-.655-2.586-2.28-2.665-2.385-.078-.105-.646-.86-.646-1.637 0-.776.406-1.157.55-1.314.144-.158.314-.197.419-.197.105 0 .21.002.302.007.098.006.229-.037.359.276.132.316.452 1.104.492 1.183.04.079.066.171.013.276-.052.105-.079.171-.157.263-.079.092-.165.205-.236.276-.079.079-.161.164-.069.322.092.158.409.674.877 1.091.603.536 1.111.702 1.269.781.158.079.25.066.342-.04.092-.105.394-.46.499-.618.105-.158.21-.132.355-.079.144.053.918.434 1.076.513.158.079.263.118.302.184.039.066.039.381-.105.786z"/></svg>
+          </div>
+          <div>
+            <strong style="color: #137333; font-size: 0.9375rem; display: block;">¿Prefieres reservar en 30 segundos por WhatsApp?</strong>
+            <span style="font-size: 0.8125rem; color: #2D5A27;">Habla directamente con Valeria y confirma tu cita al instante</span>
+          </div>
+        </div>
+        <button class="whatsapp-fast-btn" type="button">Abrir chat →</button>
+      </div>
+
+      <p style="margin-bottom: 14px; font-size: 0.9375rem; color: var(--color-ink-soft);">
+        O continúa con nuestro asistente web interactivo:
       </p>
       <div class="booking-option-card ${state.wizard.bookingType === 'valoracion' ? 'selected' : ''}" onclick="selectBookingType('valoracion')">
         <div>
           <div class="opt-title">1. Diagnóstico Clínico + Plan Personalizado (20 min)</div>
-          <div class="opt-sub">Diagnóstico presencial con Gabriela Arellano. Tu señal de 25€ se descuenta al 100% de tu primer tratamiento o producto.</div>
+          <div class="opt-sub">Evaluación con Gabriela Arellano. Tu señal de 25€ se descuenta al 100% de tu primer tratamiento o cosmética Skeyndor.</div>
         </div>
-        <div class="opt-price-tag">Señal 25€ (Bonificada)</div>
+        <div class="opt-price-tag">100% Bonificado</div>
       </div>
       <div class="booking-option-card ${state.wizard.bookingType === 'tratamiento' ? 'selected' : ''}" onclick="selectBookingType('tratamiento')">
         <div>
           <div class="opt-title">2. Reserva Directa de Tratamiento en Cabina</div>
           <div class="opt-sub">Si ya sabes qué tratamiento deseas (Facial Skeyndor, Corporal o Láser). La señal de 25€ se descuenta del total.</div>
         </div>
-        <div class="opt-price-tag">Señal 25€ (Deducible)</div>
+        <div class="opt-price-tag">Señal 25€</div>
       </div>
       <div style="background: var(--color-surface-subtle); border-left: 3px solid var(--color-olive); padding: 12px 14px; font-size: 0.8125rem; color: var(--color-ink-soft); margin-top: 14px; border-radius: 4px;">
-        ⚖️ <strong>Política de Compromiso y Cancelación:</strong> Tu señal asegura la reserva exclusiva de cabina y desinfección médica. Puedes cambiar de fecha sin coste avisando con 24h de antelación. En caso de incomparecencia sin aviso (no-show), la señal no es reembolsable.
+        💎 <strong>Garantía de Cabina Exclusiva:</strong> Para asegurar puntualidad estricta y cabina médica esterilizada para ti, solicitamos una señal de compromiso de 25€ bonificada al 100%. Cambio sin coste con 24h de aviso previo.
       </div>
     `;
     footer.innerHTML = `
@@ -283,7 +298,7 @@ function updateWizardUI() {
         <input type="date" id="bookingDate" class="form-control" value="${state.wizard.date}" min="2026-10-16" onchange="state.wizard.date = this.value">
       </div>
       <div class="form-group">
-        <label class="form-label">Horarios disponibles (estimación):</label>
+        <label class="form-label">Horarios disponibles (estimación en tiempo real):</label>
         <div class="slots-grid">
           ${TIME_SLOTS.map(s => `
             <button class="slot-btn ${state.wizard.time === s ? 'selected' : ''}" type="button" onclick="selectSlot('${s}')">${s}</button>
@@ -296,14 +311,14 @@ function updateWizardUI() {
     `;
     footer.innerHTML = `
       <button class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.875rem;" onclick="wizardPrev()">← Atrás</button>
-      <button class="btn btn-primary" style="padding: 10px 24px; font-size: 0.875rem;" onclick="wizardNext()">Tus Datos →</button>
+      <button class="btn btn-primary" style="padding: 10px 24px; font-size: 0.875rem;" onclick="wizardNext()">Tus Datos & Pago →</button>
     `;
   }
-  // Step 4: Datos de Contacto
+  // Step 4: Datos de Contacto y Método de Fianza
   else if (state.wizard.step === 4) {
     body.innerHTML = `
-      <p style="margin-bottom: 16px; font-size: 0.9375rem; color: var(--color-ink-soft);">
-        Introduce tus datos para registrar la solicitud:
+      <p style="margin-bottom: 14px; font-size: 0.9375rem; color: var(--color-ink-soft);">
+        Introduce tus datos para registrar y proteger tu cita médica:
       </p>
       <div class="form-group">
         <label class="form-label" for="clientName">Nombre y apellidos *</label>
@@ -314,49 +329,96 @@ function updateWizardUI() {
         <input type="tel" id="clientPhone" class="form-control" placeholder="Ej. 612 345 678" value="${state.wizard.phone}" oninput="state.wizard.phone = this.value" required>
       </div>
       <div class="form-group">
-        <label class="form-label" for="clientEmail">Correo electrónico</label>
+        <label class="form-label" for="clientEmail">Correo electrónico (para recordatorio)</label>
         <input type="email" id="clientEmail" class="form-control" placeholder="carmen@ejemplo.es" value="${state.wizard.email}" oninput="state.wizard.email = this.value">
       </div>
-      <div class="form-group">
-        <label class="form-label" for="clientNotes">¿Tienes alguna duda o condición médica/alergia previa?</label>
-        <textarea id="clientNotes" class="form-control" rows="2" placeholder="Opcional: motivo de consulta o tipo de piel..." oninput="state.wizard.notes = this.value">${state.wizard.notes}</textarea>
+
+      <!-- Payment Method Selection -->
+      <div style="margin-top: 16px; border-top: 1px solid var(--color-border); padding-top: 14px;">
+        <label class="form-label">Método preferido para la señal bonificada de 25€:</label>
+        <div class="payment-grid">
+          <div class="payment-card ${state.wizard.paymentMethod === 'bizum' ? 'selected' : ''}" onclick="selectPaymentMethod('bizum')">
+            <span class="payment-badge">Recomendado</span>
+            <span class="payment-name">Bizum</span>
+            <span class="payment-sub">Móvil a móvil directo</span>
+          </div>
+          <div class="payment-card ${state.wizard.paymentMethod === 'tarjeta' ? 'selected' : ''}" onclick="selectPaymentMethod('tarjeta')">
+            <span class="payment-badge" style="background: #E8F0FE; color: #1A73E8;">Seguro</span>
+            <span class="payment-name">Tarjeta / Apple Pay</span>
+            <span class="payment-sub">Pasarela segura 100%</span>
+          </div>
+          <div class="payment-card ${state.wizard.paymentMethod === 'clinica' ? 'selected' : ''}" onclick="selectPaymentMethod('clinica')">
+            <span class="payment-badge" style="background: #F1F3F4; color: #5F6368;">En persona</span>
+            <span class="payment-name">En Clínica</span>
+            <span class="payment-sub">Abonar previa cita</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--color-sand); border-left: 3px solid var(--color-olive); padding: 12px 14px; font-size: 0.8125rem; color: var(--color-ink-soft); border-radius: 4px; margin-top: 12px;">
+        💎 <strong>Compromiso 100% Bonificado:</strong> Los 25€ no son un coste adicional: se descuentan al 100% de tu tratamiento o productos Skeyndor en clínica. Tu cabina queda bloqueada y desinfectada en exclusiva para ti.
       </div>
     `;
     footer.innerHTML = `
       <button class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.875rem;" onclick="wizardPrev()">← Atrás</button>
-      <button class="btn btn-primary" style="padding: 10px 24px; font-size: 0.875rem;" onclick="submitBooking()">Confirmar Solicitud ✓</button>
+      <button class="btn btn-primary" style="padding: 10px 24px; font-size: 0.875rem;" onclick="submitBooking()">Confirmar Solicitud de Cita ✓</button>
     `;
   }
   // Step 5: Confirmación
   else if (state.wizard.step === 5) {
     const code = 'CRT-' + Math.floor(1000 + Math.random() * 9000);
+    const paymentLabel = state.wizard.paymentMethod === 'bizum' 
+      ? 'Bizum (Recibirás número oficial por WhatsApp)' 
+      : state.wizard.paymentMethod === 'tarjeta' 
+        ? 'Tarjeta / Apple Pay (Enlace protegido)' 
+        : 'Abono en Clínica Alcalá 102';
+
     body.innerHTML = `
-      <div style="text-align: center; padding: 20px 0;">
-        <div style="width: 60px; height: 60px; border-radius: 50%; background: #E6F4EA; color: #137333; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.75rem;">
+      <div style="text-align: center; padding: 16px 0;">
+        <div style="width: 58px; height: 58px; border-radius: 50%; background: #E6F4EA; color: #137333; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 1.6rem;">
           ✓
         </div>
-        <h4 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-ink); margin-bottom: 8px;">
+        <h4 style="font-family: var(--font-serif); font-size: 1.375rem; color: var(--color-ink); margin-bottom: 6px;">
           ¡Solicitud Registrada con Éxito!
         </h4>
-        <p style="font-size: 0.875rem; color: var(--color-muted); max-width: 440px; margin: 0 auto 24px;">
-          Hemos recibido tu solicitud. Nuestro equipo y Valeria revisarán la disponibilidad y te enviarán la confirmación a tu teléfono.
+        <p style="font-size: 0.875rem; color: var(--color-muted); max-width: 440px; margin: 0 auto 18px;">
+          Hemos recibido tu solicitud para Clínica CreArT. Tu cabina exclusiva está pre-bloqueada a la espera de confirmación.
         </p>
-        <div style="background: var(--color-sand); border-radius: var(--radius-md); padding: 20px; text-align: left; max-width: 460px; margin: 0 auto; border: 1px solid var(--color-border);">
-          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px; margin-bottom: 12px;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-muted); font-weight: 700;">Código de Reserva</span>
+        <div style="background: var(--color-sand); border-radius: var(--radius-md); padding: 18px; text-align: left; max-width: 460px; margin: 0 auto; border: 1px solid var(--color-border);">
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px; margin-bottom: 10px;">
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-muted); font-weight: 700;">Código de Solicitud</span>
             <span style="font-weight: 700; color: var(--color-olive);">${code}</span>
           </div>
-          <p style="font-size: 0.875rem; margin-bottom: 6px;"><strong>Tipo:</strong> ${state.wizard.treatmentName}</p>
-          <p style="font-size: 0.875rem; margin-bottom: 6px;"><strong>Fecha y hora:</strong> ${state.wizard.date} a las ${state.wizard.time}</p>
-          <p style="font-size: 0.875rem; margin-bottom: 6px;"><strong>Paciente:</strong> ${state.wizard.name || 'Cliente CreArT'}</p>
-          <p style="font-size: 0.875rem; color: var(--color-olive); font-weight: 600;"><strong>Condición económica:</strong> ${state.wizard.priceLabel}</p>
+          <p style="font-size: 0.875rem; margin-bottom: 5px;"><strong>Tratamiento:</strong> ${state.wizard.treatmentName}</p>
+          <p style="font-size: 0.875rem; margin-bottom: 5px;"><strong>Fecha y hora:</strong> ${state.wizard.date} a las ${state.wizard.time}</p>
+          <p style="font-size: 0.875rem; margin-bottom: 5px;"><strong>Paciente:</strong> ${state.wizard.name || 'Cliente CreArT'}</p>
+          <p style="font-size: 0.875rem; margin-bottom: 5px;"><strong>Modalidad de pago señal:</strong> ${paymentLabel}</p>
+          <p style="font-size: 0.875rem; color: var(--color-olive); font-weight: 600;"><strong>Condición:</strong> Señal de 25€ 100% bonificada en clínica.</p>
+        </div>
+
+        <div style="margin-top: 20px; max-width: 460px; margin-left: auto; margin-right: auto;">
+          <a href="https://wa.me/34687439710?text=Hola%20Valeria,%20acabo%20de%20solicitar%20mi%20cita%20con%20c%C3%B3digo%20${code}%20para%20el%20d%C3%ADa%20${state.wizard.date}%20a%20las%20${state.wizard.time}." target="_blank" rel="noopener" class="btn btn-olive" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 12px; font-size: 0.875rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.035-.478-1.579-.655-2.586-2.28-2.665-2.385-.078-.105-.646-.86-.646-1.637 0-.776.406-1.157.55-1.314.144-.158.314-.197.419-.197.105 0 .21.002.302.007.098.006.229-.037.359.276.132.316.452 1.104.492 1.183.04.079.066.171.013.276-.052.105-.079.171-.157.263-.079.092-.165.205-.236.276-.079.079-.161.164-.069.322.092.158.409.674.877 1.091.603.536 1.111.702 1.269.781.158.079.25.066.342-.04.092-.105.394-.46.499-.618.105-.158.21-.132.355-.079.144.053.918.434 1.076.513.158.079.263.118.302.184.039.066.039.381-.105.786z"/></svg>
+            Confirmar por WhatsApp con Valeria
+          </a>
         </div>
       </div>
     `;
     footer.innerHTML = `
-      <button class="btn btn-primary" style="margin: 0 auto; padding: 10px 32px;" onclick="closeBookingModal()">Cerrar y volver a la web</button>
+      <button class="btn btn-secondary" style="margin: 0 auto; padding: 10px 28px; font-size: 0.875rem;" onclick="closeBookingModal()">Volver a la web</button>
     `;
   }
+}
+
+function openWhatsAppBooking() {
+  const phone = '34687439710';
+  const text = encodeURIComponent('¡Hola Valeria! Me gustaría reservar una cita en Clínica CreArT para diagnóstico o tratamiento en Calle de Alcalá 102.');
+  window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+}
+
+function selectPaymentMethod(method) {
+  state.wizard.paymentMethod = method;
+  updateWizardUI();
 }
 
 function selectBookingType(type) {
