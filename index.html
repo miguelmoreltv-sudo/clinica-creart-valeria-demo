@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Clínica CreArT by Gabriela Arellano — Estética avanzada, aparatología médica y tratamientos Skeyndor en el Barrio de Salamanca, Madrid (Metro Goya). Reserva tu valoración gratuita de 20 min.">
+  <title>Clínica CreArT by Gabriela Arellano · Estética Avanzada en Madrid</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2357601F'/><text x='50' y='64' font-family='serif' font-size='48' fill='%23DD9A2E' text-anchor='middle'>C</text></svg>">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo" aria-label="Clínica CreArT">
+        <span class="brand-name">Crear<span class="brand-dot">·</span>t</span>
+        <span class="brand-sub">Estética Avanzada</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#metodo" class="nav-link">Método CreArT</a>
+        <a href="#tratamientos" class="nav-link">Tratamientos</a>
+        <a href="#equipo" class="nav-link">Equipo & Espacio</a>
+        <a href="#opiniones" class="nav-link">Opiniones</a>
+        <a href="#ubicacion" class="nav-link">Ubicación</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="valeriaHeaderBtn" class="btn-valeria-header" type="button" aria-label="Abrir asistente Valeria">
+          <span class="valeria-pulse-dot"></span>
+          Preguntar a Valeria
+        </button>
+        <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;" onclick="openBookingModal('valoracion')">
+          Pedir cita
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            4.9 / 5 en Treatwell · 1.472+ Opiniones Verificadas
+          </div>
+          
+          <h1 class="hero-headline">
+            Tu piel, cuidada con tiempo y <em>precisión clínica</em>.
+          </h1>
+
+          <p class="hero-lead">
+            Clínica de estética avanzada en el Barrio de Salamanca. Diagnóstico personalizado con Gabriela Arellano 100% bonificado al iniciar tu tratamiento, aparatología médica y cosmética de alta gama Skeyndor.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary" onclick="openBookingModal('valoracion')">
+              Reservar diagnóstico y cita (Señal 25€ deducible)
+            </button>
+            <a href="#tratamientos" class="btn btn-secondary">
+              Explorar catálogo
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Años en Salamanca</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">Skeyndor</span>
+              <span class="stat-label">Cosmética Médica Oficial</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">Metro Goya</span>
+              <span class="stat-label">Alcalá 102 · Madrid</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/plates/recepcion.jpg" alt="Recepción y entrada de Clínica CreArT Madrid">
+          </div>
+          <div class="hero-floating-card">
+            <div class="hero-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="hero-card-title">Compromiso CreArT</div>
+              <div class="hero-card-text">Puntualidad, cabinas exclusivas y resultados clínicos reales.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Method Section: 2 Steps (Valoración Bonificada + Tratamiento con Señal) -->
+    <section id="metodo" class="method-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <p class="eyebrow" style="justify-content: center;">NUESTRO MÉTODO TRANSPARENTE</p>
+          <h2 class="section-title">Diagnóstico profesional y compromiso mutuo</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            En CreArT no realizamos diagnósticos superficiales ni vendemos tratamientos a ciegas. Cada minuto de nuestra consulta está dedicado a tu piel con un protocolo riguroso.
+          </p>
+        </div>
+
+        <div class="method-grid">
+          <!-- Paso 1 -->
+          <div class="method-card featured">
+            <span class="method-badge badge-free">Paso 1 · 100% Bonificado</span>
+            <h3 class="method-title">Diagnóstico Clínico y Valoración (20 min)</h3>
+            <p class="method-desc">
+              Una sesión presencial exhaustiva con Gabriela Arellano. Analizamos de cerca tu tipo de piel, grado de hidratación, hábitos o necesidades corporales para diseñar tu pauta personalizada.
+            </p>
+            <ul class="method-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Diagnóstico profesional visual y palpatorio.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <strong>100% bonificado:</strong> El coste de la valoración se descuenta de tu primer tratamiento.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Presupuesto cerrado sin sorpresas ni ventas forzadas.
+              </li>
+            </ul>
+            <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('valoracion')">
+              Reservar diagnóstico con señal deducible
+            </button>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="method-card">
+            <span class="method-badge badge-deposit">Paso 2 · Cita confirmada</span>
+            <h3 class="method-title">Tratamiento en Cabina con Señal de 25€</h3>
+            <p class="method-desc">
+              Cuando reservas tu cita, bloqueamos la cabina y la especialista exclusivamente para ti. Para asegurar tu turno y garantizar la máxima puntualidad, solicitamos una señal de 25€.
+            </p>
+            <ul class="method-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Los 25€ se descuentan íntegramente de tu sesión o producto en clínica.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Garantiza cabina desinfectada y tiempo reservado sin esperas.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Cambio o reprogramación sin coste con 24h de aviso previo.
+              </li>
+            </ul>
+            <button class="btn btn-secondary" style="width: 100%;" onclick="openBookingModal('tratamiento')">
+              Reservar tratamiento directo
+            </button>
+          </div>
+        </div>
+
+        <!-- Anti-No-Show & Commitment Policy Callout -->
+        <div class="policy-callout">
+          <div class="policy-callout-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="policy-callout-title">Política de Asistencia, Puntualidad y Cancelación (Protección CreArT)</div>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--color-ink-soft); line-height: 1.6;">
+            En Clínica CreArT valoramos el tiempo de nuestras pacientes tanto como el de nuestras especialistas. Por respeto a la agenda y al resto de personas en lista de espera, aplicamos una política clara y honesta:
+          </p>
+          <div class="policy-grid">
+            <div class="policy-card">
+              <span class="policy-card-tag positive">✓ Paciente comprometida / Modificación con aviso</span>
+              <p>Si asistes a tu cita o necesitas reprogramar avisando con al menos <strong>24 horas de antelación</strong>, tu señal de 25€ se descuenta al 100% de tu tratamiento o se traslada a la nueva fecha sin ningún recargo.</p>
+            </div>
+            <div class="policy-card">
+              <span class="policy-card-tag warning">✕ Incomparecencia sin aviso (No-Show)</span>
+              <p>Si no acudes a tu cita o cancelas con menos de 24 horas, <strong>la señal de 25€ se retiene y no es reembolsable</strong>, para compensar el bloqueo de sala y el tiempo reservado de la especialista.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatments Bento Catalog -->
+    <section id="tratamientos" class="treatments-section">
+      <div class="container">
+        <div class="treatments-header-wrap">
+          <div>
+            <p class="eyebrow">CATÁLOGO Y PRECIOS</p>
+            <h2 class="section-title">Tratamientos pensados para cada necesidad</h2>
+            <p class="section-subtitle">
+              Precios transparentes y aparatología de vanguardia. La valoración previa te ayuda a elegir el protocolo adecuado.
+            </p>
+          </div>
+
+          <div class="treatment-tabs" role="tablist">
+            <button class="tab-btn active" data-tab="todos">Todos</button>
+            <button class="tab-btn" data-tab="facial">Facial</button>
+            <button class="tab-btn" data-tab="corporal">Corporal</button>
+            <button class="tab-btn" data-tab="depilacion">Depilación Láser</button>
+            <button class="tab-btn" data-tab="masajes">Masajes</button>
+          </div>
+        </div>
+
+        <div id="treatmentsGrid" class="bento-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Team & Clinic Space -->
+    <section id="equipo" class="team-section">
+      <div class="container team-grid">
+        <div class="team-photos-grid">
+          <div class="team-photo-card">
+            <img src="assets/plates/sala-espera.jpg" alt="Sala de espera tranquila en Clínica CreArT">
+            <div class="team-photo-caption">Sala de espera · Privacidad y calma</div>
+          </div>
+          <div class="team-photo-card">
+            <img src="assets/plates/recepcion.jpg" alt="Entrada y recepción CreArT">
+            <div class="team-photo-caption">Recepción · Alcalá 102</div>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">EQUIPO HUMANO</p>
+          <h2 class="section-title">Gabriela Arellano y su equipo</h2>
+          <p style="font-size: 1.0625rem; color: var(--color-ink-soft); margin-bottom: 24px; line-height: 1.6;">
+            Gabriela Arellano, oficial de estética y titular del centro, dirige un equipo especializado completado por Daniela y por Valeria, nuestra asistente de atención y recepción.
+          </p>
+
+          <div class="team-member-pill">
+            <div class="member-avatar">GA</div>
+            <div class="member-info">
+              <h4>Gabriela Arellano</h4>
+              <p>Oficial de Estética y Titular del Centro · Especialista Skeyndor</p>
+            </div>
+          </div>
+
+          <div class="team-member-pill">
+            <div class="member-avatar" style="background: var(--color-amber-light); color: var(--color-amber-dark);">DA</div>
+            <div class="member-info">
+              <h4>Daniela</h4>
+              <p>Auxiliar de Estética Médica & Tratamientos Corporales</p>
+            </div>
+          </div>
+
+          <div class="team-member-pill">
+            <div class="member-avatar" style="background: #E6F4EA; color: #137333;">VA</div>
+            <div class="member-info">
+              <h4>Valeria</h4>
+              <p>Asistente Digital & Recepción Clínica · Orientación 24/7</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button class="btn btn-olive" onclick="openBookingModal('valoracion')">
+              Conocer al equipo en tu valoración
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="opiniones" class="reviews-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <p class="eyebrow" style="justify-content: center;">OPINIONES REALES</p>
+          <h2 class="section-title">La confianza de nuestras clientas</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            4.9 sobre 5 en más de 1.470 opiniones verificadas en Treatwell.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                “Gabriela es estupenda. Se toma el tiempo de explicarte qué le hace falta a tu piel antes de tocar nada. Recomendable al 100%.”
+              </p>
+            </div>
+            <div class="review-author">
+              <span>Desiree M.</span>
+              <span class="review-badge">Cliente verificada</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                “Un trabajo increíble cada vez. He ido ya cinco veces para tratamientos faciales y la diferencia en luminosidad se nota al instante.”
+              </p>
+            </div>
+            <div class="review-author">
+              <span>Rachael P.</span>
+              <span class="review-badge">Cliente verificada</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                “Puntualidad británica, cabinas súper limpias y un trato humano exquisito. En el Barrio de Salamanca no hay sitio con mejor relación calidad-precio.”
+              </p>
+            </div>
+            <div class="review-author">
+              <span>Clara V.</span>
+              <span class="review-badge">Cliente verificada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Opening Hours Section -->
+    <section id="ubicacion" class="location-section">
+      <div class="container">
+        <div class="location-box">
+          <div>
+            <p class="eyebrow">DÓNDE ENCONTRARNOS</p>
+            <h2 class="section-title">En pleno Barrio de Salamanca</h2>
+            
+            <div class="location-detail-item">
+              <div class="loc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong style="color: var(--color-ink); display: block; font-size: 1rem;">Calle de Alcalá 102, 1º A</strong>
+                <span style="color: var(--color-muted); font-size: 0.9375rem;">28009 Madrid · Barrio de Salamanca</span>
+              </div>
+            </div>
+
+            <div class="location-detail-item">
+              <div class="loc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <strong style="color: var(--color-ink); display: block; font-size: 1rem;">Transporte y Acceso</strong>
+                <span style="color: var(--color-muted); font-size: 0.9375rem;">Metro Goya (Líneas 2 y 4) a 50 metros. Parking público en Felipe II y Calle Goya.</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button class="btn btn-primary" onclick="openBookingModal('valoracion')">
+                Reservar visita en Alcalá 102
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-ink); margin-bottom: 12px;">
+              Horarios de Apertura
+            </h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td>Lunes - Martes</td>
+                  <td>11:00 – 19:00</td>
+                </tr>
+                <tr>
+                  <td>Miércoles</td>
+                  <td>10:00 – 19:00</td>
+                </tr>
+                <tr>
+                  <td>Jueves - Viernes</td>
+                  <td>10:00 – 20:00</td>
+                </tr>
+                <tr>
+                  <td>Sábado</td>
+                  <td>10:00 – 14:00</td>
+                </tr>
+                <tr>
+                  <td>Domingo</td>
+                  <td style="color: var(--color-muted);">Cerrado</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Google Maps Embed Box -->
+            <div class="map-embed-wrapper">
+              <iframe 
+                src="https://maps.google.com/maps?q=Calle%20de%20Alcal%C3%A1%20102%2C%2028009%20Madrid&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%" 
+                height="220" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa de localización Calle de Alcalá 102 Madrid">
+              </iframe>
+              <div class="map-footer-link">
+                <a href="https://maps.google.com/?q=Calle+de+Alcal%C3%A1+102+Madrid" target="_blank" rel="noopener" class="btn-map-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver en Google Maps / Cómo llegar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer with Morel TV Agency Signature -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Clínica CreArT by Gabriela Arellano</h3>
+          <p>Calle de Alcalá 102, 1º A, 28009 Madrid · Metro Goya</p>
+          <p style="margin-top: 6px; color: #777;">Centro de Estética Avanzada Oficial Skeyndor</p>
+        </div>
+
+        <div class="footer-signature">
+          <div class="morel-dot"></div>
+          <span>Morel TV Agency · Solución Digital</span>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <p>Demostración tecnológica interactiva para presentación al cliente · Morel TV Agency 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Valeria Assistant Trigger -->
+  <button id="valeriaTrigger" class="valeria-float-trigger" type="button" aria-label="Hablar con Valeria">
+    <div class="valeria-avatar-glow">V</div>
+    <div class="valeria-trigger-label">
+      <span class="valeria-trigger-name">Valeria</span>
+      <span class="valeria-trigger-sub">Asistente CreArT · En línea</span>
+    </div>
+  </button>
+
+  <!-- Valeria Concierge Drawer -->
+  <div id="valeriaOverlay" class="valeria-overlay"></div>
+  <aside id="valeriaDrawer" class="valeria-drawer" aria-label="Asistente Valeria">
+    <div class="drawer-header">
+      <div class="drawer-header-info">
+        <div class="valeria-avatar-glow" style="width: 36px; height: 36px; font-size: 0.9375rem;">V</div>
+        <div>
+          <strong style="color: var(--color-cream); font-size: 0.9375rem; display: block;">Valeria · CreArT</strong>
+          <span style="color: #9EC8A2; font-size: 0.6875rem;">● En línea · Lista para orientarte</span>
+        </div>
+      </div>
+      <button id="valeriaClose" class="drawer-close" type="button" aria-label="Cerrar chat">✕</button>
+    </div>
+
+    <div id="chatMessages" class="drawer-messages">
+      <!-- Populated dynamically -->
+    </div>
+
+    <div class="quick-prompts-wrap">
+      <button class="chip-btn" type="button" onclick="askValeria('valoracion')">¿Qué incluye la valoración?</button>
+      <button class="chip-btn" type="button" onclick="askValeria('senal')">¿Cómo funciona la señal 25€?</button>
+      <button class="chip-btn" type="button" onclick="askValeria('ubicacion')">¿Dónde estáis?</button>
+      <button class="chip-btn" type="button" onclick="askValeria('facial')">Tratamiento facial Skeyndor</button>
+      <button class="chip-btn" type="button" onclick="askValeria('cita')">📅 Pedir cita</button>
+    </div>
+
+    <div class="drawer-input-bar">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Pregunta lo que desees sobre la clínica...">
+      <button id="chatSendBtn" class="chat-send-btn" type="button" aria-label="Enviar mensaje">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Interactive Booking Wizard Modal -->
+  <div id="bookingModalOverlay" class="modal-overlay">
+    <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h3 id="modalTitle">Reserva tu Cita en CreArT</h3>
+        <button class="drawer-close" style="color: var(--color-muted);" onclick="closeBookingModal()" type="button" aria-label="Cerrar ventana">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="wizard-steps">
+          <div class="wizard-step active">
+            <div class="step-circle">1</div>
+            <span class="step-name">Tipo</span>
+          </div>
+          <div class="wizard-step">
+            <div class="step-circle">2</div>
+            <span class="step-name">Servicio</span>
+          </div>
+          <div class="wizard-step">
+            <div class="step-circle">3</div>
+            <span class="step-name">Horario</span>
+          </div>
+          <div class="wizard-step">
+            <div class="step-circle">4</div>
+            <span class="step-name">Datos</span>
+          </div>
+          <div class="wizard-step">
+            <div class="step-circle">5</div>
+            <span class="step-name">Confirmación</span>
+          </div>
+        </div>
+
+        <div id="wizardStepContent">
+          <!-- Step injected dynamically by app.js -->
+        </div>
+      </div>
+
+      <div id="wizardFooter" class="modal-footer">
+        <!-- Buttons injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
