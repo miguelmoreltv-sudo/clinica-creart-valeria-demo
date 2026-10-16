@@ -1094,7 +1094,7 @@ function updateWizardUI() {
         </div>
 
         <div style="margin-top: 20px; max-width: 460px; margin-left: auto; margin-right: auto;">
-          <a href="https://wa.me/34687439710?text=Hola%20Valeria,%20acabo%20de%20solicitar%20mi%20cita%20con%20c%C3%B3digo%20${code}%20para%20el%20d%C3%ADa%20${state.wizard.date}%20a%20las%20${state.wizard.time}." target="_blank" rel="noopener" class="btn btn-olive" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 12px; font-size: 0.875rem;">
+          <a href="https://wa.me/34633424380?text=Hola%20Valeria,%20acabo%20de%20solicitar%20mi%20cita%20con%20c%C3%B3digo%20${code}%20para%20el%20d%C3%ADa%20${state.wizard.date}%20a%20las%20${state.wizard.time}." target="_blank" rel="noopener" class="btn btn-olive" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 12px; font-size: 0.875rem;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.035-.478-1.579-.655-2.586-2.28-2.665-2.385-.078-.105-.646-.86-.646-1.637 0-.776.406-1.157.55-1.314.144-.158.314-.197.419-.197.105 0 .21.002.302.007.098.006.229-.037.359.276.132.316.452 1.104.492 1.183.04.079.066.171.013.276-.052.105-.079.171-.157.263-.079.092-.165.205-.236.276-.079.079-.161.164-.069.322.092.158.409.674.877 1.091.603.536 1.111.702 1.269.781.158.079.25.066.342-.04.092-.105.394-.46.499-.618.105-.158.21-.132.355-.079.144.053.918.434 1.076.513.158.079.263.118.302.184.039.066.039.381-.105.786z"/></svg>
             Confirmar por WhatsApp con Valeria
           </a>
@@ -1108,7 +1108,7 @@ function updateWizardUI() {
 }
 
 function openWhatsAppBooking() {
-  const phone = '34687439710';
+  const phone = '34633424380';
   const text = encodeURIComponent('¡Hola Valeria! Me gustaría reservar una cita en Clínica CreArT para diagnóstico o tratamiento en Calle de Alcalá 102.');
   window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
 }
