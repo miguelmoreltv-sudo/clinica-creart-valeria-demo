@@ -1804,3 +1804,25 @@ button {
   display: block;
 }
 
+/* Wizard Category Filter Chips */
+.chip-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  background: var(--color-sand);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.chip-btn.active, .chip-btn:hover {
+  background: var(--color-olive);
+  color: #FFF;
+  border-color: var(--color-olive);
+}
+
+

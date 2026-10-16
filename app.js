@@ -6,64 +6,708 @@
 // Treatments Data
 const TREATMENTS_DATA = [
   {
-    id: 'laser-diodo',
-    category: 'depilacion',
-    name: 'Depilación Láser de Diodo de Alta Potencia',
-    duration: 'Según zona, 15 - 45 min',
-    price: 'Desde 25€',
-    plate: 'assets/plates/depilacion.jpg',
-    tag: 'Depilación',
-    desc: 'Tecnología de última generación apta para todo tipo de fototipos. Sesiones rápidas, confort térmico y máxima eficacia desde la primera cita.'
+    "id": "depilacion-mujer-depilaci-n-de-zona-peri",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de zona perianal con cera",
+    "duration": "15 min",
+    "price": "15€",
+    "price_num": 15.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Existen diferentes estilos de depilación de la zona de la ingle, pero la depilación Hollywood es la más usada. Diseñada para retirar absolutamente todo el vello de la parte trasera y delantera de la zona de la ingle, la depilación Hollywood brinda un resultado suave y prolijo que dura alrededor de un mes."
   },
   {
-    id: 'power-hyaluronic',
-    category: 'facial',
-    name: 'Tratamiento Power Hyaluronic Skeyndor',
-    duration: '60 min',
-    price: '60€',
-    plate: 'assets/plates/facial.jpg',
-    tag: 'Facial',
-    desc: 'Hidratación hidrodinámica 100% que equilibra la piel deshidratada y atenúa arrugas de expresión provocadas por la pérdida de agua.'
+    "id": "depilacion-mujer-depilaci-n-de-ingles-no",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de ingles normales con cera",
+    "duration": "15 min",
+    "price": "20€",
+    "price_num": 20.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "¿Quieres lucir tus ingles libres de vello? Si decides llevar rasurada esta zona íntima, la depilación con cera es lo que estabas buscando. Y si es la primera vez que vas a depilarte las ingles y tienes dudas, ¡que no cunda el pánico! Estos profesionales te las resolverán encantados. Siéntate, ponte cómoda y déjate hacer."
   },
   {
-    id: 'vitamina-c',
-    category: 'facial',
-    name: 'Power C+ Antioxidante e Iluminador',
-    duration: '60 min',
-    price: '65€',
-    plate: 'assets/plates/facial.jpg',
-    tag: 'Facial',
-    desc: 'Potente concentrado de Vitamina C y extracto de granada. Revitaliza la piel apagada, unifica el tono y combate el daño solar y ambiental.'
+    "id": "depilacion-mujer-depilaci-n-de-ingles-co",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de ingles completas con cera",
+    "duration": "25 min",
+    "price": "25€",
+    "price_num": 25.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "¿Quieres lucir tus ingles libres de vello? Si decides llevar rasurada esta zona íntima, la depilación con cera es lo que estabas buscando. Y si es la primera vez que vas a depilarte las ingles y tienes dudas, ¡que no cunda el pánico! Estos profesionales te las resolverán encantados. ¡Ponle remedio ahora!"
   },
   {
-    id: 'anticelulitico',
-    category: 'corporal',
-    name: 'Tratamiento Anticelulítico & Maderoterapia',
-    duration: '60 min',
-    price: '60€',
-    plate: 'assets/plates/corporal.jpg',
-    tag: 'Corporal',
-    desc: 'Combinación drenante y remodeladora para reducir volumen localizado, reactivar la circulación y reafirmar el tejido cutáneo.'
+    "id": "depilacion-mujer-depilaci-n-de-piernas-c",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de piernas con cera",
+    "duration": "25-45 min",
+    "price": "15€",
+    "price_num": 15.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Si está cansada de afeitarse las piernas regularmente y lucha contra el vello incipiente, la depilación con cera es una magnífica alternativa para unas piernas suaves y sedosas. Esta técnica ampliamente probada, que arranca el pelo de raíz directamente, es ideal para olvidarse de las piernas con vello para aquellas mujeres que no están dispuestas a tomar medidas más drásticas."
   },
   {
-    id: 'presoterapia',
-    category: 'corporal',
-    name: 'Presoterapia Médica Ballancer',
-    duration: '45 min',
-    price: '35€',
-    plate: 'assets/plates/corporal.jpg',
-    tag: 'Corporal',
-    desc: 'Drenaje linfático secuencial ideal para aliviar piernas cansadas, retención de líquidos y como complemento tras sesiones reductoras.'
+    "id": "depilacion-mujer-depilaci-n-de-muslos-co",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de muslos con cera",
+    "duration": "25 min",
+    "price": "22€",
+    "price_num": 22.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "¿Quieres despedirte de esos pelillos que tanto te molestan? Si quieres que la parte superior de las piernas luzca también suave y sin vello, opta por esta depilación de muslos con cera. ¡Luce tus piernas!"
   },
   {
-    id: 'masaje-relajante',
-    category: 'masajes',
-    name: 'Masaje Relajante & Descontracturante',
-    duration: '50 min',
-    price: '60€',
-    plate: 'assets/plates/masajes.jpg',
-    tag: 'Masajes',
-    desc: 'Técnica personalizada que alivia tensiones musculares en espalda y cervicales con aceites botánicos esenciales en cabina climatizada.'
+    "id": "depilacion-mujer-depilaci-n-de-axilas-co",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de axilas con cera",
+    "duration": "15 min",
+    "price": "10€",
+    "price_num": 10.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "¿Quieres sacar partido a todo tu armario sin preocuparte por el vello? Las axilas suelen ser una de las zonas de nuestro cuerpo con más vello: si eso te molesta, no dudes en hacerte esta depilación con cera. ¡Ponle remedio ya!"
+  },
+  {
+    "id": "depilacion-mujer-depilaci-n-de-brazos-co",
+    "category": "depilacion",
+    "name": "Mujer - Depilación de brazos con cera",
+    "duration": "25 min",
+    "price": "15€",
+    "price_num": 15.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "¿Te has olvidado de tus brazos? De vez en cuando necesitan también su turno de depilación. Con este servicio, un equipo profesional se encargará de que te olvides del vello por un tiempo con una depilación con cera."
+  },
+  {
+    "id": "depilacion-mujer-depilaci-n-facial-con-c",
+    "category": "depilacion",
+    "name": "Mujer - Depilación facial con cera",
+    "duration": "10 min",
+    "price": "8€",
+    "price_num": 8.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Si quieres lucir un rostro impecable y suave, decídete por esta depilación facial con cera."
+  },
+  {
+    "id": "mirada-mujer-depilaci-n-facial-con-hilo",
+    "category": "mirada",
+    "name": "Mujer - Depilación facial con hilo",
+    "duration": "30 min",
+    "price": "35€",
+    "price_num": 35.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Libérate de esos molestos vellos en el rostro con una depilación facial con hilo, una técnica especialmente recomendada para las pieles más sensibles."
+  },
+  {
+    "id": "mirada-mujer-dise-o-de-cejas",
+    "category": "mirada",
+    "name": "Mujer - Diseño de cejas",
+    "duration": "20 min",
+    "price": "20€",
+    "price_num": 20.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "A veces, un simple retoque en nuestro rostro se convierte en un gran cambio. Y es que las cejas también forman parte del ''look'' de nuestro rostro. Porque sí, el diseño de cejas existe. Y es muy importante a la hora de transmitir una sensación a través de nuestra mirada. ¡Ponte en manos de estos especialistas y mira al mundo con otros ojos!"
+  },
+  {
+    "id": "mirada-mujer-laminado-y-dise-o-de-cejas",
+    "category": "mirada",
+    "name": "Mujer -Laminado y diseño de cejas",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "El ''pack'' completo para resaltar tu mirada. Le darás intensidad a estás dos partes de tu rostro y ahorrarás tiempo a diario, ya que no tendrás que maquillar cejas y pestañas durante una temporada. '''Paso a paso: ''' * Preparación y limpieza. * Aplicación del tinte. Se deja actuar durante unos minutos. * Retirada del producto."
+  },
+  {
+    "id": "mirada-mujer-lifting-de-pesta-as-coreano",
+    "category": "mirada",
+    "name": "Mujer - Lifting de pestañas  Coreano + Tinte",
+    "duration": "75 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Con el lifting conseguirás alargar y elevar tus pestañas. Si tus pestañas caen rectas, con este tratamiento podrás elevarlas y darles una curvatura natural. '''Paso a paso: ''' * Preparación de las pestañas. * Aplicación del producto. Se deja actuar durante unos minutos. * Retirada de la solución y limpieza."
+  },
+  {
+    "id": "mirada-mujer-permanente-de-pesta-as-tint",
+    "category": "mirada",
+    "name": "Mujer - Permanente de pestañas + Tinte",
+    "duration": "75 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Si te gustan las pestañas largas y rizadas como las de las muñecas, este secreto de belleza te va a encantar. Puede que te parezca raro, pero en vez de dejarte como una trasnochada estrella ochentera, el rizado de pestañas te proporcionará unas pestañas rizadas durante semanas sin tener que recurrir al rímel ni tampoco a las engorrosas pestañas postizas."
+  },
+  {
+    "id": "facial-limpieza-facial-con-punta-de-diam",
+    "category": "facial",
+    "name": "Limpieza facial con punta de diamante",
+    "duration": "75 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Higiene Clínica",
+    "desc": "Desde la exposición solar hasta la contaminación, su rostro está expuesto todos los días a elementos que pueden dañar su piel a largo plazo. Así pues, los tratamientos faciales son la mejor respuesta para restaurar la elasticidad, combatir el acné, las impurezas o incluso la rosácea, manteniendo su piel limpia, luminosa y saludable durante mucho tiempo."
+  },
+  {
+    "id": "facial-higiene-facial-con-tratamiento",
+    "category": "facial",
+    "name": "Higiene facial con tratamiento",
+    "duration": "75 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Higiene Clínica",
+    "desc": "Desde la exposición solar hasta la contaminación, su rostro está expuesto todos los días a elementos que pueden dañar su piel a largo plazo. Así pues, los tratamientos faciales son la mejor respuesta para restaurar la elasticidad, combatir el acné, las impurezas o incluso la rosácea, manteniendo su piel limpia, luminosa y saludable durante mucho tiempo."
+  },
+  {
+    "id": "facial-tratamiento-power-hyaluronic-skey",
+    "category": "facial",
+    "name": "Tratamiento Power Hyaluronic Skeyndor",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor Oficial",
+    "desc": "Desde la exposición solar hasta la contaminación, su rostro está expuesto todos los días a elementos que pueden dañar su piel a largo plazo. Así pues, los tratamientos faciales son la mejor respuesta para restaurar la elasticidad, combatir el acné, las impurezas o incluso la rosácea, manteniendo su piel limpia, luminosa y saludable durante mucho tiempo."
+  },
+  {
+    "id": "facial-tratamiento-power-oxygen-skeyndor",
+    "category": "facial",
+    "name": "Tratamiento Power Oxygen Skeyndor",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor Oficial",
+    "desc": "Desde la exposición solar hasta la contaminación, su rostro está expuesto todos los días a elementos que pueden dañar su piel a largo plazo. Así pues, los tratamientos faciales son la mejor respuesta para restaurar la elasticidad, combatir el acné, las impurezas o incluso la rosácea, manteniendo su piel limpia, luminosa y saludable durante mucho tiempo."
+  },
+  {
+    "id": "facial-tratamiento-power-c-skeyndor",
+    "category": "facial",
+    "name": "Tratamiento Power C+ Skeyndor",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor Oficial",
+    "desc": "Desde la exposición solar hasta la contaminación, su rostro está expuesto todos los días a elementos que pueden dañar su piel a largo plazo. Así pues, los tratamientos faciales son la mejor respuesta para restaurar la elasticidad, combatir el acné, las impurezas o incluso la rosácea, manteniendo su piel limpia, luminosa y saludable durante mucho tiempo."
+  },
+  {
+    "id": "facial-tratamiento-facial-timeless-prodi",
+    "category": "facial",
+    "name": "Tratamiento facial  Timeless Prodigy ( Rosa Damascena )",
+    "duration": "75 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Facial",
+    "desc": "Para mimar tu piel y hacer que luzca más joven y firme, elige este tratamiento antiedad. Que tu rostro refleje la energía y vitalidad que te caracterizan. '''Beneficios: '''prevención del envejecimiento cutáneo, favorecimiento de la renovación celular y efecto reafirmante."
+  },
+  {
+    "id": "facial-tratamiento-facial-eternal-celula",
+    "category": "facial",
+    "name": "Tratamiento facial Eternal celulas Madre vegetales",
+    "duration": "75 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Facial",
+    "desc": "Para mimar tu piel y hacer que luzca más joven y firme, elige este tratamiento antiedad. Que tu rostro refleje la energía y vitalidad que te caracterizan. '''Beneficios: '''prevención del envejecimiento cutáneo, favorecimiento de la renovación celular y efecto reafirmante."
+  },
+  {
+    "id": "facial-tratamiento-de-global-lift",
+    "category": "facial",
+    "name": "Tratamiento De Global Lift",
+    "duration": "75 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Facial",
+    "desc": "Sea cual sea tu tipo de piel, una hidratación es siempre saludable. Si además tienes tendencia a la piel seca, hará que tu piel vuelva a estar suave y nutrida. '''Paso a paso: ''' * Desmaquillado del rostro. * Aplicación de tónico. * Exfoliación. * Aplicación de vapor. * Extracción de impurezas. * Sérum. * Aplicación de mascarilla. * Masaje facial con crema."
+  },
+  {
+    "id": "facial-tratamiento-corrective",
+    "category": "facial",
+    "name": "Tratamiento Corrective",
+    "duration": "75 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Facial",
+    "desc": "Sea cual sea tu tipo de piel, una hidratación es siempre saludable. Si además tienes tendencia a la piel seca, hará que tu piel vuelva a estar suave y nutrida. '''Paso a paso: ''' * Desmaquillado del rostro. * Aplicación de tónico. * Exfoliación. * Aplicación de vapor. * Extracción de impurezas. * Sérum. * Aplicación de mascarilla. * Masaje facial con crema."
+  },
+  {
+    "id": "masajes-drenaje-linf-tico-facial",
+    "category": "masajes",
+    "name": "Drenaje linfático facial",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "En el rostro se reflejan todas nuestras emociones, ¡cuídalo con este drenaje linfático facial! Descubre esta técnica de masajes con movimientos muy suaves y lentos de bombeo. Las pequeñas presiones se dirigen en dirección a la linfa para eliminar las toxinas por vía natural. Tiene efectos rejuvenecedores, adelgazantes, favorece a la circulación sanguínea y fortalece los músculos. ¡Dile adiós al estrés! '''Paso a paso:''' * Desmaquillado del rostro. * Aplicación de tónico. * Exfoliación. * Aplicación de vapor. * Extracción de impurezas. * Sérum. * Aplicación de mascarilla. * Masaje facial con crema."
+  },
+  {
+    "id": "masajes-masaje-relajante",
+    "category": "masajes",
+    "name": "Masaje relajante",
+    "duration": "50 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "Tu día a día puede resultar estresante, nada mejor que desconectar unos minutos y disfrutar de un masaje relajante como este."
+  },
+  {
+    "id": "masajes-masaje-completo",
+    "category": "masajes",
+    "name": "Masaje completo",
+    "duration": "50 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "Los traumatismos, la malas posturas y el estrés afectan a nuestro cuerpo causando molestias. Si es tu caso y necesitas un alivio, prueba con un masaje terapéutico."
+  },
+  {
+    "id": "masajes-masaje-circulatorio",
+    "category": "masajes",
+    "name": "Masaje circulatorio",
+    "duration": "50 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "Uno de los masajes más relajantes y a la vez una forma óptima para favorecer la circulación. Este masaje moviliza los tejidos de la piel dejándola tersa y firme, reduciendo la retención de líquidos y las hinchazones."
+  },
+  {
+    "id": "masajes-masaje-descontracturante",
+    "category": "masajes",
+    "name": "Masaje descontracturante",
+    "duration": "50 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "¡Si tiene tensiones y dolores que el masaje sueco clásico no puede resolver, quizás esta técnica sea la opción ideal! El masaje de los tejidos profundos utiliza mayor presión y se concentra sobre la zona afectada, pudiendo provocar algo de molestia. ¡Pero vale la pena, ya que alivia el dolor a largo plazo!"
+  },
+  {
+    "id": "masajes-masaje-localizado",
+    "category": "masajes",
+    "name": "Masaje localizado",
+    "duration": "20 min",
+    "price": "30€",
+    "price_num": 30.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "Si está estresado o presenta tensión y dolor crónico, un masaje terapéutico le ayudará a aliviar el dolor. Así sea un masaje abdominal o de espalda, mejorará su estado físico y permitirá que se relaje."
+  },
+  {
+    "id": "masajes-drenaje-linf-tico",
+    "category": "masajes",
+    "name": "Drenaje linfático",
+    "duration": "50 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "Si quieres librarte de la retención de líquidos y de las toxinas acumuladas en tu cuerpo, esto es lo que estabas buscando. Este minucioso masaje manual reactivará tu sistema linfático, mejorando así la circulación y eliminando la celulitis."
+  },
+  {
+    "id": "masajes-presoterapia",
+    "category": "masajes",
+    "name": "Presoterapia",
+    "duration": "30-60 min",
+    "price": "20€",
+    "price_num": 20.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Presoterapia",
+    "desc": "El tratamiento estrella para combatir la celulitis y la retención de líquidos. Gracias a la presión sobre determinados puntos se favorece el drenaje linfático, la reactivación de la circulación y la eliminación de residuos."
+  },
+  {
+    "id": "masajes-presoterapia-para-embarazadas",
+    "category": "masajes",
+    "name": "Presoterapia para embarazadas",
+    "duration": "30-60 min",
+    "price": "20€",
+    "price_num": 20.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Presoterapia",
+    "desc": "¿Buscas algún tratamiento específico para los meses de embarazo? Para actuar específicamente contra la retención de líquidos y mejorar la circulación durante el proceso, este es el tratamiento más indicado. Si estás en ese período en que ya te empiezas a notar las piernas hinchadas... ¡No esperes más! '''Ten en cuenta que:''' durante el embarazo solo se puede realizar la presoterapia en zonas localizadas como las piernas o los brazos."
+  },
+  {
+    "id": "masajes-electroestimulaci-n",
+    "category": "masajes",
+    "name": "Electroestimulación",
+    "duration": "30-60 min",
+    "price": "30€",
+    "price_num": 30.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Masajes",
+    "desc": "La electroestimulación es una técnica que trabaja mediante impulsos eléctricos que provocan contracciones musculares, creando un efecto similar al que se conseguiría mediante el ejercicio físico."
+  },
+  {
+    "id": "corporal-cavitaci-n-corporal-y-presotera",
+    "category": "corporal",
+    "name": "Cavitación corporal y presoterapia",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Presoterapia",
+    "desc": "Puede que asocies el ultrasonido con las pruebas para determinar el sexo de un bebé, pero estas versátiles ondas ofrecen una amplia gama de beneficios médicos para ayudar a eliminar dolores y molestias. Si padeces dolores o molestias, la terapia con ultrasonidos podría ser la solución perfecta."
+  },
+  {
+    "id": "corporal-tratamiento-anticelul-tico",
+    "category": "corporal",
+    "name": "Tratamiento anticelulítico",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Corporal",
+    "desc": "La celulitis es un verdadero quebradero de cabeza. Puedes pasarte horas sudando en el gimnasio pero los bultitos persistentes no se mueven. No te preocupes, no estás solo; nueve de cada diez mujeres sufren de celulitis. Por suerte, hay muchas opciones para ayudar y atacar este problema de raíz."
+  },
+  {
+    "id": "corporal-tratamiento-reafirmante",
+    "category": "corporal",
+    "name": "Tratamiento reafirmante",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Corporal",
+    "desc": "¿Necesitas una solución para la flacidez de la piel? Este tratamiento reafirmante es ideal después de realizar cualquier tratamiento reductor o dieta, ya que contribuye a hacer que la piel del cuerpo recupere la elasticidad y aumente su firmeza. ¡Consigue una figura más definida!"
+  },
+  {
+    "id": "corporal-tratamiento-corporal-piernas-li",
+    "category": "corporal",
+    "name": "Tratamiento corporal piernas ligeras",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Corporal",
+    "desc": "Tratamiento corporal con efecto detox y drenante."
+  },
+  {
+    "id": "masajes-drenaje-linfatico-vendas-anti-ed",
+    "category": "masajes",
+    "name": "Drenaje linfatico + Vendas anti edema + Presoterapia",
+    "duration": "75 min",
+    "price": "90€",
+    "price_num": 90.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Presoterapia",
+    "desc": "Las vendas frías aprovechan nuestro propio metabolismo para reafirmar, hidratar la piel y quemar grasas y además lo combinamos con un masaje manual reductor previo para obtener mejores resultados."
+  },
+  {
+    "id": "corporal-radiofrecuencia-corporal-megan-",
+    "category": "corporal",
+    "name": "RADIOFRECUENCIA CORPORAL MEGAN BY SKEYNDOR Reafirmante",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Tratamiento profesional en cabina realizado por especialistas de Clínica CreArT con cosmética y aparatología de alta gama."
+  },
+  {
+    "id": "corporal-radiofrecuencia-corporal-megan-",
+    "category": "corporal",
+    "name": "RADIOFRECUENCIA CORPORAL MEGAN BY SKEYNDOR Remodelante",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Radiofrecuencia monopolar con 3 tecnologías. -HI-FREQ: estimula, regenera y remodela. -DERMABOOST: mejora la permeabilidad celular. -LED RGB: permite una mejora absorción de los diferentes concentrados con tecnología Dron."
+  },
+  {
+    "id": "masajes-maderoterapia",
+    "category": "masajes",
+    "name": "Maderoterapia",
+    "duration": "30-60 min",
+    "price": "40€",
+    "price_num": 40.0,
+    "plate": "assets/plates/masajes.jpg",
+    "tag": "Maderoterapia",
+    "desc": "La maderoterapia es una técnica de masaje en la que se emplean diferentes objetos de madera específicamente diseñados para ello. ¿Su finalidad? Reafirmar, tonificar y combatir la celulitis. Aprovecha todas las propiedades beneficiosas del masaje con madera y remodela tu silueta. '''Paso a paso:''' * Limpieza de la piel. * Hidratación. * Masaje."
+  },
+  {
+    "id": "depilacion-mujer-depilaci-n-l-ser",
+    "category": "depilacion",
+    "name": "Mujer - Depilación láser",
+    "duration": "5-55 min",
+    "price": "6€",
+    "price_num": 6.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Láser Diodo",
+    "desc": "¡Haz que tu vello se esfume!. La depilación láser es una forma eliminar el vello mediante una luz pulsada intensa para desactivar el folículo. Es la más famosa de las técnicas de eliminación de pelo, los arranca raíz y ayuda a evitar esos desagradables pelitos pequeños."
+  },
+  {
+    "id": "depilacion-menton",
+    "category": "depilacion",
+    "name": "Menton",
+    "duration": "5 min",
+    "price": "6€",
+    "price_num": 6.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Rápida y eficaz. Para cualquiera que quiera librarse de las cuchillas y la cera para siempre, la depilación láser es la mejor solución. Da ya el paso y despídete de tu vello corporal."
+  },
+  {
+    "id": "depilacion-patillas",
+    "category": "depilacion",
+    "name": "Patillas",
+    "duration": "15 min",
+    "price": "6€",
+    "price_num": 6.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Rápida y eficaz. Para cualquiera que quiera librarse de las cuchillas y la cera para siempre, la depilación láser es la mejor solución. Da ya el paso y despídete de tu vello corporal."
+  },
+  {
+    "id": "facial-dermapen-facial-polivitaminas",
+    "category": "facial",
+    "name": "Dermapen facial + Polivitaminas",
+    "duration": "55 min",
+    "price": "50€",
+    "price_num": 50.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Dermapen Médico",
+    "desc": "¿Alguna vez ha soñado retroceder en el tiempo?, ¡estás de suerte! ahora puedes recurrir al microneedling, el nuevo tratamiento preferido de las famosas que, gracias a una serie de pequeñas perforaciones en la piel, ofrece un aspecto más fresco y más joven. ¡En serio, no es tan doloroso como parece y los beneficios son extraordinarios! ¡Prepárate para decirle adiós a las arrugas y las cicatrices!"
+  },
+  {
+    "id": "facial-dermapen-facial-vitaminas-kojico-",
+    "category": "facial",
+    "name": "Dermapen facial + Vitaminas Kojico y Retinol DESPIGMENTANTE",
+    "duration": "55 min",
+    "price": "50€",
+    "price_num": 50.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Dermapen Médico",
+    "desc": "¿Alguna vez ha soñado retroceder en el tiempo?, ¡estás de suerte! ahora puedes recurrir al microneedling, el nuevo tratamiento preferido de las famosas que, gracias a una serie de pequeñas perforaciones en la piel, ofrece un aspecto más fresco y más joven. ¡En serio, no es tan doloroso como parece y los beneficios son extraordinarios! ¡Prepárate para decirle adiós a las arrugas y las cicatrices!"
+  },
+  {
+    "id": "facial-radiofrecuencia-facial-megan-by-s",
+    "category": "facial",
+    "name": "RADIOFRECUENCIA FACIAL MEGAN BY SKEYNDOR Alisador y Liftante.",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Radiofrecuencia monopolar con 3 tecnologías. -HI-FREQ: estimula, regenera y remodela. -DERMABOOST: mejora la permeabilidad celular. -LED RGB: permite una mejora absorción de los diferentes concentrados con tecnología Dron."
+  },
+  {
+    "id": "facial-radiofrecuencia-facial-megan-by-s",
+    "category": "facial",
+    "name": "RADIOFRECUENCIA FACIAL MEGAN BY SKEYNDOR Rellenador / contorno de ojos.",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Radiofrecuencia monopolar con 3 tecnologías. -HI-FREQ: estimula, regenera y remodela. -DERMABOOST: mejora la permeabilidad celular. -LED RGB: permite una mejora absorción de los diferentes concentrados con tecnología Dron."
+  },
+  {
+    "id": "facial-radiofrecuencia-facial-megan-by-s",
+    "category": "facial",
+    "name": "RADIOFRECUENCIA FACIAL MEGAN BY SKEYNDOR Pieles con manchas",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Radiofrecuencia monopolar con 3 tecnologías. -HI-FREQ: estimula, regenera y remodela. -DERMABOOST: mejora la permeabilidad celular. -LED RGB: permite una mejora absorción de los diferentes concentrados con tecnología Dron."
+  },
+  {
+    "id": "facial-radiofrecuencia-facial-megan-by-s",
+    "category": "facial",
+    "name": "RADIOFRECUENCIA FACIAL MEGAN BY SKEYNDOR Iluminador",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Radiofrecuencia monopolar con 3 tecnologías. -HI-FREQ: estimula, regenera y remodela. -DERMABOOST: mejora la permeabilidad celular. -LED RGB: permite una mejora absorción de los diferentes concentrados con tecnología Dron."
+  },
+  {
+    "id": "facial-radiofrecuencia-facial-megan-by-s",
+    "category": "facial",
+    "name": "RADIOFRECUENCIA FACIAL MEGAN BY SKEYNDOR Refinador de poros",
+    "duration": "70 min",
+    "price": "85€",
+    "price_num": 85.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Skeyndor MEGAN",
+    "desc": "Radiofrecuencia monopolar con 3 tecnologías. -HI-FREQ: estimula, regenera y remodela. -DERMABOOST: mejora la permeabilidad celular. -LED RGB: permite una mejora absorción de los diferentes concentrados con tecnología Dron."
+  },
+  {
+    "id": "mirada-mujer-depilaci-n-de-cejas-con-hil",
+    "category": "mirada",
+    "name": "Mujer - Depilación de cejas con hilo",
+    "duration": "20 min",
+    "price": "25€",
+    "price_num": 25.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Una técnica natural y nada agresiva de dar forma a tus cejas. Si tienes la piel sensible pero quieres unas cejas cuidadas y definidas este es el método ideal para ti."
+  },
+  {
+    "id": "mirada-mujer-depilaci-n-de-labio-superio",
+    "category": "mirada",
+    "name": "Mujer - Depilación de labio superior con hilo",
+    "duration": "5 min",
+    "price": "10€",
+    "price_num": 10.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Libérate del vello del labio superior con está depilación con hilo. Una técnica procedente de la India, especialmente recomendada para las pieles más sensibles."
+  },
+  {
+    "id": "mirada-mujer-depilaci-n-de-cejas-y-labio",
+    "category": "mirada",
+    "name": "Mujer - Depilación de cejas y labio superior con hilo",
+    "duration": "30 min",
+    "price": "35€",
+    "price_num": 35.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Una técnica natural y nada agresiva de dar forma a tus cejas y conseguir un labio superior libre de vello. Además, si tienes la piel sensible este es el método ideal para ti."
+  },
+  {
+    "id": "mirada-mujer-depilaci-n-facial-con-hilo",
+    "category": "mirada",
+    "name": "Mujer - Depilación facial con hilo",
+    "duration": "5-10 min",
+    "price": "15€",
+    "price_num": 15.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Libérate de esos molestos vellos en el rostro con una depilación facial con hilo, una técnica especialmente recomendada para las pieles más sensibles."
+  },
+  {
+    "id": "mirada-hombre-depilaci-n-de-cejas-con-hi",
+    "category": "mirada",
+    "name": "Hombre - Depilación de cejas con hilo",
+    "duration": "20 min",
+    "price": "25€",
+    "price_num": 25.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "¿Sabías que con unas cejas limpias y bien diseñadas puedes mejorar la expresión de tu rostro? La depilación con hilo es una técnica natural y nada agresiva para dar forma a tus cejas. Es el método perfecto para ti si tienes la piel sensible pero quieres unas cejas cuidadas. ¡Luce tu rostro!"
+  },
+  {
+    "id": "mirada-mujer-depilaci-n-facial-con-hilo",
+    "category": "mirada",
+    "name": "Mujer - Depilación facial con hilo",
+    "duration": "10-30 min",
+    "price": "10€",
+    "price_num": 10.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "Libérate de esos molestos vellos en el rostro con una depilación facial con hilo, una técnica especialmente recomendada para las pieles más sensibles."
+  },
+  {
+    "id": "mirada-mujer-colorido-de-cejas",
+    "category": "mirada",
+    "name": "Mujer - Colorido de cejas.",
+    "duration": "10 min",
+    "price": "10€",
+    "price_num": 10.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "El ''pack'' completo para resaltar tu mirada. Le darás intensidad a estás dos partes de tu rostro y ahorrarás tiempo a diario, ya que no tendrás que maquillar cejas y pestañas durante una temporada. '''Paso a paso: ''' * Preparación y limpieza. * Aplicación del tinte. Se deja actuar durante unos minutos. * Retirada del producto."
+  },
+  {
+    "id": "corporal-peeling-corporal",
+    "category": "corporal",
+    "name": "Peeling corporal",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Corporal",
+    "desc": "Exfolia e hidrata tu piel despues de las vacaciones. Limpieza profunda de la piel. Favorece el drenaje. Mejor bronceado. Previene el envejecimiento prematuro de la piel porque activa la circulación sanguínea. Produce un buen funcionamiento del sistema linfático. Elimina los vellos enquistados y molestos."
+  },
+  {
+    "id": "corporal-peeling-de-piernas",
+    "category": "corporal",
+    "name": "Peeling de piernas",
+    "duration": "35 min",
+    "price": "35€",
+    "price_num": 35.0,
+    "plate": "assets/plates/corporal.jpg",
+    "tag": "Corporal",
+    "desc": "¿Quieres una limpieza profunda para la piel de las piernas? Con este peeling eliminarás la capa más superficial, que es la que acumula más impurezas, consiguiendo una piel suave y renovada. ¡Perfecto en cualquier momento!"
+  },
+  {
+    "id": "facial-limpieza-facial-con-punta-de-diam",
+    "category": "facial",
+    "name": "Limpieza facial con punta de diamante + Dermapen con vitaminas",
+    "duration": "85 min",
+    "price": "110€",
+    "price_num": 110.0,
+    "plate": "assets/plates/facial.jpg",
+    "tag": "Dermapen Médico",
+    "desc": "Desde la exposición solar hasta la contaminación, su rostro está expuesto todos los días a elementos que pueden dañar su piel a largo plazo. Así pues, los tratamientos faciales son la mejor respuesta para restaurar la elasticidad, combatir el acné, las impurezas o incluso la rosácea, manteniendo su piel limpia, luminosa y saludable durante mucho tiempo."
+  },
+  {
+    "id": "depilacion-hombre-depilaci-n-corporal-to",
+    "category": "depilacion",
+    "name": "Hombre - Depilación corporal torax",
+    "duration": "30 min",
+    "price": "40€",
+    "price_num": 40.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Para eliminar el vello corporal, ya sea por estética o porque practicas algún deporte, esta depilación con cera es seguramente tu mejor opción."
+  },
+  {
+    "id": "depilacion-hombre-depilaci-n-corporal-br",
+    "category": "depilacion",
+    "name": "Hombre - Depilación corporal Brazos",
+    "duration": "25 min",
+    "price": "30€",
+    "price_num": 30.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Para eliminar el vello corporal, ya sea por estética o porque practicas algún deporte, esta depilación con cera es seguramente tu mejor opción."
+  },
+  {
+    "id": "depilacion-hombre-depilaci-n-corporal-pi",
+    "category": "depilacion",
+    "name": "Hombre - Depilación corporal piernas completas",
+    "duration": "50 min",
+    "price": "50€",
+    "price_num": 50.0,
+    "plate": "assets/plates/depilacion.jpg",
+    "tag": "Depilación",
+    "desc": "Para eliminar el vello corporal, ya sea por estética o porque practicas algún deporte, esta depilación con cera es seguramente tu mejor opción."
+  },
+  {
+    "id": "mirada-mujer-laminado-dise-o-y-tinte-de-",
+    "category": "mirada",
+    "name": "Mujer - Laminado, diseño  y tinte de cejas",
+    "duration": "60 min",
+    "price": "60€",
+    "price_num": 60.0,
+    "plate": "assets/plates/mirada.jpg",
+    "tag": "Mirada & Cejas",
+    "desc": "El tratamiento más completo que le puedes dar a tus cejas. Obtendrás un diseño favorecedor a tus facciones y unas cejas perfectamente perfiladas, que resaltarán aún más gracias al tinte. Si leído suena bien, ¡imagínate cuando vayas! '''Paso a paso: ''' * Preparación de las cejas. * Depilación. * Aplicación del tinte. Se deja actuar durante unos minutos. * Retirada del producto y limpieza."
   }
 ];
 
@@ -75,6 +719,8 @@ const TIME_SLOTS = [
 // App State
 const state = {
   activeTab: 'todos',
+  searchQuery: '',
+  wizardFilterCat: 'todos',
   wizard: {
     step: 1,
     bookingType: 'valoracion', // 'valoracion' (0€) or 'tratamiento' (25€ señal)
@@ -108,9 +754,30 @@ function renderTreatmentsGrid() {
   const grid = document.getElementById('treatmentsGrid');
   if (!grid) return;
 
-  const filtered = state.activeTab === 'todos' 
+  let filtered = state.activeTab === 'todos' 
     ? TREATMENTS_DATA 
     : TREATMENTS_DATA.filter(t => t.category === state.activeTab);
+
+  if (state.searchQuery) {
+    const q = state.searchQuery.toLowerCase();
+    filtered = filtered.filter(t => 
+      t.name.toLowerCase().includes(q) ||
+      t.desc.toLowerCase().includes(q) ||
+      t.tag.toLowerCase().includes(q) ||
+      t.category.toLowerCase().includes(q)
+    );
+  }
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 24px; background: var(--color-surface); border-radius: var(--radius-md); border: 1px dashed var(--color-border); margin: 20px 0;">
+        <p style="font-size: 1.125rem; font-family: var(--font-serif); color: var(--color-ink); margin-bottom: 8px;">No encontramos tratamientos para "${state.searchQuery}".</p>
+        <p style="font-size: 0.875rem; color: var(--color-muted);">Prueba con otro término o consúltanos directamente por WhatsApp.</p>
+        <button class="btn btn-secondary" style="margin-top: 16px; padding: 8px 20px; font-size: 0.8125rem;" onclick="resetTreatmentSearch()">Ver los 64 tratamientos</button>
+      </div>
+    `;
+    return;
+  }
 
   grid.innerHTML = filtered.map(t => `
     <article class="treatment-card" data-id="${t.id}">
@@ -138,6 +805,13 @@ function renderTreatmentsGrid() {
   `).join('');
 }
 
+function resetTreatmentSearch() {
+  state.searchQuery = '';
+  const input = document.getElementById('treatmentSearchInput');
+  if (input) input.value = '';
+  renderTreatmentsGrid();
+}
+
 // Setup Treatment Filter Tabs
 function setupTabFilters() {
   const buttons = document.querySelectorAll('.tab-btn');
@@ -149,6 +823,14 @@ function setupTabFilters() {
       renderTreatmentsGrid();
     });
   });
+
+  const searchInput = document.getElementById('treatmentSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value.toLowerCase().trim();
+      renderTreatmentsGrid();
+    });
+  }
 }
 
 // ==============================================================================
@@ -264,23 +946,38 @@ function updateWizardUI() {
   // Step 2: Tratamiento (si eligió tratamiento) o pasar a Fecha
   else if (state.wizard.step === 2) {
     if (state.wizard.bookingType === 'valoracion') {
-      // Valoración doesn't need catalog selection, go directly to Date & Time
       wizardNext();
       return;
     }
+    const cat = state.wizardFilterCat || 'todos';
+    const list = cat === 'todos' ? TREATMENTS_DATA : TREATMENTS_DATA.filter(t => t.category === cat);
+
     body.innerHTML = `
-      <p style="margin-bottom: 18px; font-size: 0.9375rem; color: var(--color-ink-soft);">
-        Selecciona el tratamiento que deseas reservar:
+      <p style="margin-bottom: 10px; font-size: 0.9375rem; color: var(--color-ink-soft);">
+        Selecciona tu tratamiento en cabina (64 opciones disponibles):
       </p>
-      ${TREATMENTS_DATA.map(t => `
-        <div class="booking-option-card ${state.wizard.selectedTreatment === t.id ? 'selected' : ''}" onclick="selectTreatmentOption('${t.id}', '${t.name}', '${t.price}')">
-          <div>
-            <div class="opt-title">${t.name}</div>
-            <div class="opt-sub">${t.duration} · ${t.tag}</div>
-          </div>
-          <div class="opt-price-tag">${t.price}</div>
-        </div>
-      `).join('')}
+      <div style="display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px;">
+        <button class="chip-btn ${cat === 'todos' ? 'active' : ''}" onclick="filterWizardCat('todos')">Todos</button>
+        <button class="chip-btn ${cat === 'facial' ? 'active' : ''}" onclick="filterWizardCat('facial')">Facial</button>
+        <button class="chip-btn ${cat === 'corporal' ? 'active' : ''}" onclick="filterWizardCat('corporal')">Corporal</button>
+        <button class="chip-btn ${cat === 'masajes' ? 'active' : ''}" onclick="filterWizardCat('masajes')">Masajes</button>
+        <button class="chip-btn ${cat === 'depilacion' ? 'active' : ''}" onclick="filterWizardCat('depilacion')">Depilación</button>
+        <button class="chip-btn ${cat === 'mirada' ? 'active' : ''}" onclick="filterWizardCat('mirada')">Mirada</button>
+      </div>
+      <div style="max-height: 320px; overflow-y: auto; padding-right: 4px; display: flex; flex-direction: column; gap: 8px;">
+        ${list.map(t => {
+          const safeName = t.name.replace(/'/g, "\\'");
+          return `
+            <div class="booking-option-card ${state.wizard.selectedTreatment === t.id ? 'selected' : ''}" onclick="selectTreatmentOption('${t.id}', '${safeName}', '${t.price}')">
+              <div>
+                <div class="opt-title">${t.name}</div>
+                <div class="opt-sub">${t.duration} · ${t.tag}</div>
+              </div>
+              <div class="opt-price-tag">${t.price}</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
     `;
     footer.innerHTML = `
       <button class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.875rem;" onclick="wizardPrev()">← Atrás</button>
@@ -605,4 +1302,9 @@ function askValeria(topic) {
   } else if (topic === 'cita') {
     handleUserChat('Quiero pedir una cita ahora');
   }
+}
+
+function filterWizardCat(category) {
+  state.wizardFilterCat = category;
+  updateWizardUI();
 }
