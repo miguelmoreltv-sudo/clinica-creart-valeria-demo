@@ -1082,79 +1082,129 @@ button {
   color: var(--color-amber-dark);
 }
 
-/* Policy Callout & Anti-No-Show Box */
-.policy-callout {
-  margin-top: 36px;
-  background: #FFF;
-  border: 1.5px solid rgba(87, 96, 31, 0.25);
-  border-radius: var(--radius-md);
-  padding: 24px 28px;
-  box-shadow: var(--shadow-sm);
+/* ==============================================================================
+   COMMITMENT & EXCLUSIVE CABIN PROTOCOL (REPLACING DEFENSIVE POLICY BOX)
+   ============================================================================== */
+.commitment-section {
+  padding: 80px 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.policy-callout-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+.commitment-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.policy-callout-header svg {
-  color: var(--color-olive);
-  flex-shrink: 0;
-}
-
-.policy-callout-title {
-  font-size: 1.0625rem;
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
-.policy-grid {
+.commitment-pillars-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 14px;
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .policy-grid {
-    grid-template-columns: 1fr 1fr;
+  .commitment-pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.policy-card {
-  background: var(--color-cream);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-  border: 1px solid var(--color-border-subtle);
+.pillar-card {
+  background: #FFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
-.policy-card-tag {
-  display: inline-block;
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-card.highlight {
+  border: 1.5px solid var(--color-amber);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF9 100%);
+  box-shadow: 0 10px 28px -8px rgba(221, 154, 46, 0.2);
+}
+
+.pillar-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
   font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 3px 8px;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
   border-radius: var(--radius-full);
-  margin-bottom: 8px;
-}
-
-.policy-card-tag.positive {
   background: #E6F4EA;
   color: #137333;
 }
 
-.policy-card-tag.warning {
-  background: #FCE8E6;
-  color: #C5221F;
+.pillar-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-sand);
+  color: var(--color-olive);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
-.policy-card p {
-  font-size: 0.8125rem;
+.pillar-icon-box.gold {
+  background: rgba(221, 154, 46, 0.12);
+  color: var(--color-amber-dark);
+}
+
+.pillar-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 10px;
+  font-family: var(--font-sans);
+  line-height: 1.35;
+}
+
+.pillar-text {
+  font-size: 0.875rem;
   color: var(--color-ink-soft);
-  line-height: 1.5;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.commitment-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.btn-whatsapp-subtle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #137333;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.btn-whatsapp-subtle:hover {
+  background: #E6F4EA;
+  color: #0d5324;
 }
 
 /* ==============================================================================
